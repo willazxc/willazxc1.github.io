@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Бибика</title>
+ <style>
+
+   body {
+   background-image: url("https://gas-kvas.com/uploads/posts/2023-01/1673521960_gas-kvas-com-p-doroga-risunok-detskii-9.jpg");
+   background-size: initial;
+   background-position: top;
+  }
+
+  .car {
+   position: absolute; /*позиц.расположение одной картинки на другую*/
+   left: 200px;
+   top: 50%;
+   transform: translateY(-50%); /* сдвиг эл */
+   width: 200px;
+   height: 100px;
+   background-color: #cc0000;
+   border-radius: 10px;  /* скругление границ */
+   animation: drive 5s linear forwards; /* стоп машина*/
+  }
+
+  .car:before {
+   content: "";  /* св-во */
+   position: absolute;
+   left: 20px;
+   bottom: 0;
+   width: 60px;
+   height: 60px;
+   background-color: #0f0e0d;
+   border-radius: 50%;
+  }
+
+  .car:after {
+   content: "";
+   position: absolute;
+   right: 20px;
+   bottom: 0;
+   width: 50px;
+   height: 50px;
+   background-color: #14120f;
+   border-radius: 50%;
+  }
+
+  @keyframes drive {    /* ключевые кадры */
+   from {
+    left: 0px;    /* откуда она выезжает */
+   }
+   to {
+    left: calc(100% - 250px);
+   }
+  }
+ </style>
+</head>
+<body>
+ <div class="car"></div>
+</body>
+</html>
